@@ -1,12 +1,15 @@
 import React from "react";
+import HeroSection from "../components/HeroSection/HeroSection";
 
-const HomePage = ({ onLogout }) => {
+
+
+function HomePage() {
   return (
-    <div>page content */
-      
-       
-      </div>
+    <div>
+      <HeroSection />
+      {/* Other home page content */}
+    </div>
   );
-};
+}
 
 export default HomePage;

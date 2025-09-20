@@ -6,7 +6,7 @@ import MedicinePage from "./pages/MedicinePage";
 import ConsultationPage from "./pages/ConsultationPage";
 import AboutPage from "./pages/AboutPage";
 import Header from "./components/header/header";
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/navbar/navbar";  
 import "./App.css";
 
 function App() {
@@ -18,12 +18,8 @@ function App() {
 
   return (
     <Router>
-      {/* Header and Navbar always visible */}
-      <Header onLogout={handleLogout} />
-      <Navbar />
-
       <Routes>
-        {/* Landing Page */}
+        {/* Landing Page - no header/navbar */}
         <Route
           path="/login"
           element={
@@ -35,36 +31,28 @@ function App() {
           }
         />
 
-        {/* Home Page */}
+        {/* All other pages - with header & navbar */}
         <Route
-          path="/home"
+          path="/*"
           element={
-            isAuthenticated ? <HomePage /> : <Navigate to="/login" />
+            isAuthenticated ? (
+              <>
+                <Header onLogout={handleLogout} />
+                <Navbar />
+                <Routes>
+                  <Route path="/home" element={<HomePage />} />
+                  <Route path="/medicine" element={<MedicinePage />} />
+                  <Route path="/consultation" element={<ConsultationPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  {/* default redirect */}
+                  <Route path="*" element={<Navigate to="/home" />} />
+                </Routes>
+              </>
+            ) : (
+              <Navigate to="/login" />
+            )
           }
         />
-
-        {/* Other pages */}
-        <Route
-          path="/medicine"
-          element={
-            isAuthenticated ? <MedicinePage /> : <Navigate to="/login" />
-          }
-        />
-        <Route
-          path="/consultation"
-          element={
-            isAuthenticated ? <ConsultationPage /> : <Navigate to="/login" />
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            isAuthenticated ? <AboutPage /> : <Navigate to="/login" />
-          }
-        />
-
-        {/* Default route */}
-        <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
   );
