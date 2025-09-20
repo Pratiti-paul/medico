@@ -5,13 +5,16 @@ import HomePage from "./pages/HomePage";
 import "./App.css";
 
 function App() {
-  // simple state for demo (in real app, you'd check JWT/localStorage/session)
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
 
   return (
     <Router>
       <Routes>
-        {/* Landing Page as /login */}
+        {/* Landing Page */}
         <Route
           path="/login"
           element={
@@ -28,12 +31,13 @@ function App() {
           path="/home"
           element={
             isAuthenticated ? (
-              <HomePage onLogout={() => setIsAuthenticated(false)} />
+              <HomePage onLogout={handleLogout} />
             ) : (
               <Navigate to="/login" />
             )
           }
         />
+
 
         {/* Default route */}
         <Route path="*" element={<Navigate to="/login" />} />
@@ -43,4 +47,3 @@ function App() {
 }
 
 export default App;
-

@@ -8,8 +8,7 @@ const HomePage = ({ onLogout }) => {
       
       <div style={{ padding: "20px" }}>
         <h1>Welcome to Medico+ Home Page</h1>
-        <button onClick={onLogout}>Logout</button>
-        {/* Your other home page content goes here */}
+       
       </div>
     </div>
   );
