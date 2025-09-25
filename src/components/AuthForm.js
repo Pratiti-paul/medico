@@ -9,19 +9,16 @@ const AuthForm = ({ isLogin, onAuth }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // For Sign Up, check passwords match
     if (!isLogin && password !== confirmPassword) {
       alert("Passwords do not match");
       return;
     }
 
-    // Simulate API call success
     console.log(isLogin ? "Login successful!" : "Signup successful!", {
       email,
       password,
     });
 
-    // Call onAuth to set isAuthenticated = true in App.js
     onAuth();
   };
 
@@ -45,7 +42,6 @@ const AuthForm = ({ isLogin, onAuth }) => {
         required
       />
 
-      {/* Confirm password only for Sign Up */}
       {!isLogin && (
         <>
           <label>Confirm Password</label>
@@ -59,7 +55,6 @@ const AuthForm = ({ isLogin, onAuth }) => {
         </>
       )}
 
-      {/* Forgot password button only for Sign In */}
       {isLogin && (
         <button
           type="button"

@@ -5,9 +5,8 @@ import HeroSection from "../components/HeroSection/HeroSection";
 
 function HomePage() {
   return (
-    <div>
+    <div className="home-page">
       <HeroSection />
-      {/* Other home page content */}
     </div>
   );
 }

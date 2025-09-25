@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AuthForm from "../components/AuthForm";
 import "./LandingPage.css";
 
-const LandingPage = ({ onAuth }) => { // <--- receive onAuth prop
+const LandingPage = ({ onAuth }) => { 
   const [isLogin, setIsLogin] = useState(true);
 
   return (
@@ -11,7 +11,7 @@ const LandingPage = ({ onAuth }) => { // <--- receive onAuth prop
         <h1>Healthcare + E-Commerce</h1>
         <h2>{isLogin ? "Sign In" : "Sign Up"}</h2>
 
-        <AuthForm isLogin={isLogin} onAuth={onAuth} /> {/* <--- pass onAuth */}
+        <AuthForm isLogin={isLogin} onAuth={onAuth} /> 
 
         <p className="switch-text">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}

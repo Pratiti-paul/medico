@@ -19,7 +19,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Landing Page - no header/navbar */}
         <Route
           path="/login"
           element={
@@ -31,7 +30,6 @@ function App() {
           }
         />
 
-        {/* All other pages - with header & navbar */}
         <Route
           path="/*"
           element={
@@ -44,7 +42,6 @@ function App() {
                   <Route path="/medicine" element={<MedicinePage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/about" element={<AboutPage />} />
-                  {/* default redirect */}
                   <Route path="*" element={<Navigate to="/home" />} />
                 </Routes>
               </>

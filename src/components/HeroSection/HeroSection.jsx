@@ -6,7 +6,6 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="hero-container">
-        {/* Left Content */}
         <div className="hero-left">
           <h1>
             Your Health, <span className="highlight">Our Priority</span>
@@ -16,7 +15,6 @@ const HeroSection = () => {
             and manage your wellness journey all in one place.
           </p>
 
-          {/* CTA Buttons */}
           <div className="cta-buttons">
             <button className="btn primary">
               Book Consultation <ArrowRight />
@@ -26,7 +24,6 @@ const HeroSection = () => {
             </button>
           </div>
 
-          {/* Trust Indicators */}
           <div className="trust-indicators">
             <div className="indicator">
               <Shield /> <span>FDA Approved</span>
@@ -40,7 +37,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Content */}
         <div className="hero-right">
           <div className="hero-image-container">
             <img
@@ -51,7 +47,6 @@ const HeroSection = () => {
             <div className="image-overlay"></div>
           </div>
 
-          {/* Floating Cards */}
           <div className="floating-card top-left">
             <div className="status-dot"></div>
             <span>Online Now</span>
@@ -65,7 +60,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Background decorations */}
           <div className="bg-circle top-right"></div>
           <div className="bg-circle bottom-left"></div>
         </div>

@@ -12,10 +12,7 @@ const Header = ({ onLogout }) => {
   return (
     <>
       <header className="header">
-        {/* Left: Logo */}
         <div className="header-logo">Medico+</div>
-
-        {/* Middle: Search Bar */}
         <div className="header-search">
           <input
             type="text"
@@ -24,15 +21,13 @@ const Header = ({ onLogout }) => {
           <button>Search</button>
         </div>
 
-        {/* Right: Account & Cart */}
         <div className="header-icons">
-          {/* Account icon triggers modal */}
           <FaUserCircle
-            className="icon account-icon"
+            className="icon-account-icon"
             title="Account"
             onClick={toggleAccountModal}
           />
-          <FaShoppingCart className="icon cart-icon" title="Cart" />
+          <FaShoppingCart className="icon-cart-icon" title="Cart" />
         </div>
       </header>
 
