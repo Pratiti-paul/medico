@@ -8,7 +8,9 @@ const LandingPage = ({ onAuth }) => {
   return (
     <div className="landing-container">
       <div className="auth-box">
-        <h1>Healthcare + E-Commerce</h1>
+        <h1>Welcome to Medico!!</h1>
+
+
         <h2>{isLogin ? "Sign In" : "Sign Up"}</h2>
 
         <AuthForm isLogin={isLogin} onAuth={onAuth} /> 

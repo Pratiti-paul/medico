@@ -2,38 +2,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;        
   background: #f5f8ff;
+  padding: 3rem;
 }
 
 .auth-box {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 350px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;    
+  padding-top: 5px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 1200px;         
+  min-height: 800px;        
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
   text-align: center;
+  font-family: Georgia;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
 }
 
 .auth-box h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 4rem;          
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #2563eb;
 }
 
 .auth-box h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 2.5rem;        
+  margin-bottom: 3rem;
+  color: #2563eb;
 }
 
 .switch-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  margin-top: 3rem;
+  font-size: 2.1rem;         
+  color: #555;
 }
 
 .switch-btn {
   background: none;
   border: none;
-  color: #007bff;
+  color: #2563eb;
+  font-weight: bold;
   cursor: pointer;
+  transition: color 0.2s ease;
+  font-size: 1.8rem;         /* big button link */
+}
+
+.switch-btn:hover {
+  color: #1d4ed8;
 }
